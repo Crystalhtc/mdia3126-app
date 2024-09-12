@@ -1,15 +1,14 @@
 import {View, Text} from "react-native";
 
 export default function myLabel({
-    text="Label"
+    labelText
 }) {
     
-    return <View style={{
-        backgroundColor: "#CCC",
-        borderRadius: 10,
-        padding:5
-    }}>
-        <Text>{text}</Text>
+    return <View>
+        <Text
+            style={{
+                color: "purple"}}
+        >{labelText}</Text>
     </View>
     
 }

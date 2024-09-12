@@ -4,8 +4,12 @@ import { Text, View } from "react-native";
 
 //may not need template for now
 // import MyButton from "@/components/mycustom/atom/Button";
-import LabelButton from "@/components/mycustom/molecule/LabelButton";
-import FormSlider from "@/components/mycustom/organism/FormSlider";
+// import LabelButton from "@/components/mycustom/molecule/LabelButton";
+// import FormSlider from "@/components/mycustom/organism/FormSlider";
+// import Button from "@/components/mycustom/atom/Button";
+// import Label from "@/components/mycustom/atom/Label";
+
+import InputForm from "@/components/mycustom/molecule/InputForm";
 
 export default function Index() {
   return (
@@ -14,33 +18,14 @@ export default function Index() {
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        flexDirection: "column",
-        gap: 5
       }}
     >
-      <View>
-        <Text style={{fontSize: 24}}>Welcome to my app!</Text>
-      </View>
-      <View>
-        <FormSlider />
-      </View>
-
-      <View style={{
-        flexDirection: "row",
-        gap: 5
-      }}>
-        <LabelButton 
-          label_text="previous"
-          button_text="<-"
-        />
-        <LabelButton 
-          label_text="next"
-          button_text="->"
-        />
-              
-      </View>
-
-      
+      <InputForm 
+        placeholderText="I'm an input form!" 
+        labelText="Button Label" 
+        titleForButton="Button!"
+        placeholderTextColor="pink"
+      />
     </View>
   );
 }
